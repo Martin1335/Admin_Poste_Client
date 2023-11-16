@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de téléchargement de Martin</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Inter:wght@500&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header {
+            background-color: rgb(206, 206, 206);
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+        
+        footer {
+            background-color: rgb(206, 206, 206);
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        main {
+            padding: 2em;
+        }
+        
+        * {
+            font-family: 'Gabarito', cursive;
+            color: #000000;
+        }
+        
+        #TEXT {
+            text-align: center;
+            font-size: 40px;
+        }
+        
+        #FORM {
+            text-align: center;
+        }
+        
+        #UPLOAD {
+            font-size: 30px;
+            border-radius: 25px;
+            padding-top: 5px;
+            padding-bottom: 9px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-width: 0.5px;
+            border-color: #4f4f4f;
+            border-style: solid;
+            color: #000000;
+        }
+        
+        #TEXTE {
+            font-size: 35px;
+        }
+        
+        #TEXTE2 {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Mon site d'upload</h1>
+    </header>
+
+    <main>
+        <p id="TEXT"> Upload des fichiers</p>
+
+        <form id="FORM" action="upload.php" method="post" enctype="multipart/form-data">
+            <label id="TEXTE" for="file">Veuillez sélectionner un fichier :</label>
+            <br><br>
+            <input id="TEXTE2" type="file" name="file" id="file" required>
+            <br><br><br><br><br>
+            <input id="UPLOAD" type="submit" value="Upload">
+        </form>
+
+        <?php include 'file-list.php'; ?>
+    </main>
+
+    <footer>
+        <p>© 2023 Site d'upload. Tous droits réservés.</p>
+    </footer>
+</body>
+
+</html>
